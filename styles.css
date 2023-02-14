@@ -1,0 +1,140 @@
+/* CSS Reset  */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+}
+
+p, h1 {
+  overflow-wrap: break-word;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* End */
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.product-preview-card {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 1rem;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.card-content {
+  background-color: hsl(0, 0%, 100%);
+  padding: 25px;
+}
+
+p {
+  font-size: 0.875rem;
+  color: hsl(228, 12%, 48%);
+  margin: 1em auto;
+}
+
+h1, .main-price {
+  font-family: 'Fraunces', serif;
+  line-height: 1;
+}
+
+.product-type {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.5rem;
+  margin-top: 0;
+}
+
+.pricing {
+  display: flex;
+  align-items: center;
+  padding-top: 0.8rem;
+}
+
+.main-price {
+  font-size: 2rem;
+  color: hsl(158, 36%, 37%);
+  padding-right: 1rem;
+}
+
+del {
+  font-size: 0.8rem;
+}
+
+del::before {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  content: " Old price: ";
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: hsl(0, 0%, 100%);
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+button > img {
+  padding-right: 0.8rem;
+}
+
+.attribution {
+  font-size: 11px; text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
