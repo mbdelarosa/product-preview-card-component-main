@@ -45,57 +45,66 @@ p, h1 {
 }
 /* End */
 
+:root {
+  /* Primary */
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+
+  /* Neutral */
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
 body {
-  background-color: hsl(30, 38%, 92%);
-  display: flex;
-  flex-direction: column;
+  background-color: var(--cream);
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
   justify-content: center;
   align-items: center;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
 }
 
-.product-preview-card {
+.card-component {
+  max-width: 30rem;
+  margin: 1rem;
+  background-color: var(--white);
+  border-radius: 0.6rem;
+  overflow: hidden;
+  font-size: 0.875rem;
+  color: var(--dark-grayish-blue);
+}
+
+.card-component__text {
+  padding: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: column;
-  margin: 1.5rem 1rem;
-  overflow: hidden;
-  border-radius: 10px;
+  gap: 1.25rem;
 }
 
-.card-content {
-  background-color: hsl(0, 0%, 100%);
-  padding: 25px;
-}
-
-p {
-  font-size: 0.875rem;
-  color: hsl(228, 12%, 48%);
-  margin: 1em auto;
-}
-
-h1, .main-price {
-  font-family: 'Fraunces', serif;
-  line-height: 1;
-}
-
-.product-type {
+.card-component__ribbon {
   text-transform: uppercase;
   font-size: 0.8rem;
-  letter-spacing: 0.5rem;
-  margin-top: 0;
+  letter-spacing: 0.25rem;
+  margin-bottom: 0.85rem;
 }
 
-.pricing {
+.card-component__title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.925rem;
+  line-height: 1;
+  color: var(--very-dark-blue);
+}
+
+.card-component__prices {
   display: flex;
   align-items: center;
-  padding-top: 0.8rem;
+  gap: 1.25rem;
 }
 
-.main-price {
-  font-size: 2rem;
-  color: hsl(158, 36%, 37%);
-  padding-right: 1rem;
+.card-component__price {
+  color: var(--dark-cyan);
 }
 
 del {
@@ -113,28 +122,16 @@ del::before {
   content: " Old price: ";
 }
 
-button {
+.card-component__button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  background-color: hsl(158, 36%, 37%);
+  gap: 1ch;
+  background-color: var(--dark-cyan);
   border: none;
-  border-radius: 10px;
-  font-weight: 700;
-  font-size: 0.875rem;
-  color: hsl(0, 0%, 100%);
+  border-radius: 0.5rem;
   padding: 1rem;
-  margin: 1rem 0;
-}
-
-button > img {
-  padding-right: 0.8rem;
-}
-
-.attribution {
-  font-size: 11px; text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--white);
+  font-size: 0.85rem;
+  font-weight: 700;
 }
