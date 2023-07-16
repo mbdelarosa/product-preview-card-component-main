@@ -48,6 +48,7 @@ p, h1 {
 :root {
   /* Primary */
   --dark-cyan: hsl(158, 36%, 37%);
+  --dark-cyan-hover: hsl(158, 36%, 32%);
   --cream: hsl(30, 38%, 92%);
 
   /* Neutral */
@@ -134,6 +135,11 @@ del::before {
   color: var(--white);
   font-size: 0.85rem;
   font-weight: 700;
+  cursor: pointer;
+}
+
+.card-component__button:hover, .card-component__button:focus {
+  background-color: var(--dark-cyan-hover);
 }
 
 @media only screen and (min-width: 50rem) {
